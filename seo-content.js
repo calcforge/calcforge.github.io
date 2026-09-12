@@ -1,98 +1,122 @@
 const SEO_CONTENT={
-'wire-size':{keywords:['wire size calculator','wire gauge calculator','electrical wire size','NEC wire size','copper wire size','AWG wire size','conductor sizing','voltage drop wire size','electrical load calculator','ampacity','branch circuit sizing','feeder wire size','wire gauge chart','copper conductor','electrical calculations','residential wiring','commercial wiring','conductor ampacity'],article:`Choosing the correct electrical conductor is one of the most important steps in a safe and reliable electrical installation. A wire size calculator gives you a practical starting point by relating load current, system voltage, circuit distance and allowable voltage drop. For electricians, electrical engineers, contractors and maintenance teams, conductor sizing is more than simply picking an AWG number: the final selection must also satisfy ampacity, installation conditions and the requirements that apply to the project.
+'wire-size':{primary:'wire size calculator',intent:'Informational and calculation intent: users want a practical conductor-size estimate, usually with voltage-drop and NEC context.',keywords:['wire size calculator','wire gauge calculator','electrical wire size calculator','NEC wire size calculator','copper wire size','AWG wire size','wire sizing calculator','conductor sizing calculator','electrical wire gauge','wire size for amps','wire size for voltage drop','voltage drop wire size','branch circuit wire size','feeder wire size','electrical conductor sizing','copper conductor size','AWG wire chart','circular mil wire size','wire ampacity','conductor ampacity','NEC conductor sizing','residential wire size','commercial electrical wire size','long run wire size'],article:`A wire size calculator is most useful when it explains why a conductor is selected rather than simply returning an AWG number. This CalcForge tool estimates a copper conductor size from load current, system voltage, one-way distance and a voltage-drop target. It is a preliminary voltage-drop calculation; final conductor selection must also satisfy ampacity, installation conditions, terminal ratings and the adopted electrical code.
 
-This CalcForge wire size calculator uses a transparent voltage-drop approach. Enter the load current, system voltage, one-way circuit distance and target voltage-drop percentage. The calculator estimates the required conductor area and maps that value to a common copper AWG size. This makes it useful for preliminary branch-circuit sizing, feeder planning and checking whether a proposed copper wire is likely to meet a voltage-drop target.
+The search intent behind wire-size questions is usually practical: what wire size is appropriate for a given load and run length, and will voltage drop be acceptable? The tool answers the voltage-drop portion transparently and points to the separate checks needed before installation.
 
-### How wire size is determined
-The simplified calculation is based on the relationship between current, distance, conductor resistance and circular-mil area. A longer run produces more resistance and therefore more voltage drop. A higher current also increases voltage drop. Increasing conductor area reduces resistance, which is why a larger conductor may be needed even when the basic ampacity requirement appears acceptable.
+### What the wire size calculator calculates
+The calculator converts the selected voltage-drop percentage into an allowable voltage loss, calculates the required conductor area in circular mils, then maps that area to a common copper AWG size. Because the circuit distance is entered as one-way distance, the calculation accounts for the outgoing and returning conductor path internally.
 
-### Understanding AWG and conductor area
-American Wire Gauge numbers become smaller as conductor diameter increases. In electrical calculations, conductor area is often represented in circular mils because it makes resistance and voltage-drop formulas convenient. The calculator uses an AWG reference table to translate the required area into a practical copper wire gauge.
+### AWG and circular mils explained
+American Wire Gauge (AWG) is a standardized conductor-size system in which smaller gauge numbers represent larger conductors. Circular mils provide a convenient area unit for electrical resistance calculations. The larger the circular-mil area, the lower the conductor resistance for the same material and length.
 
-### Voltage drop and ampacity are different checks
-A common mistake is treating voltage drop as the only wire-sizing requirement. It is not. Ampacity is the conductor's allowable current-carrying capacity under the applicable installation conditions. Voltage drop is a performance consideration that tells you how much voltage is lost along the circuit. A properly designed electrical circuit should satisfy both requirements, along with conductor insulation temperature, terminal ratings, ambient conditions, bundling and other applicable rules.
+### Wire size formula and variables
+The simplified relationship is CM = 2 × K × I × D ÷ Vd. CM is conductor area in circular mils, K is the copper resistivity constant used by this tool, I is current in amperes, D is one-way distance, and Vd is allowable voltage drop in volts. The target percentage is converted to volts from the system voltage before the calculation.
 
-### How circuit distance affects wire size
-Distance has a direct effect on conductor resistance. As a circuit gets longer, the same current travels through more conductor resistance and voltage drop increases. Long feeders, detached-building circuits and equipment runs may therefore need a larger conductor than a short circuit carrying the same load.
+### Step-by-step conductor sizing
+Start with the expected load current and nominal system voltage. Measure the one-way run length, choose a defensible voltage-drop target, calculate the required circular-mil area, and select the next available AWG conductor that meets that area. Then perform the separate ampacity and installation-condition checks required for the actual circuit.
 
-### Copper versus other conductor materials
-This calculator is based on a copper resistivity constant. Aluminum conductors have different electrical resistance characteristics and installation considerations, so their sizing should use the appropriate material-specific data. The same AWG number does not automatically produce the same voltage-drop result across different conductor materials.
+### Voltage drop versus ampacity
+Voltage drop and ampacity answer different questions. Ampacity addresses allowable current under the applicable installation conditions; voltage drop addresses electrical performance over distance. A conductor can pass an ampacity check and still produce more voltage drop than the design target. Conversely, reducing voltage drop does not automatically make a conductor code-compliant for ampacity.
 
-### When to use this calculator
-Use the tool for preliminary electrical design, estimating conductor size for long runs, comparing copper wire gauges, reviewing a branch circuit, or explaining voltage-drop effects to a project team. For a final installation, verify the selected conductor using the applicable NEC requirements and the actual conductor manufacturer's data. The calculator intentionally exposes its formula so the assumptions are easy to review rather than hiding the calculation behind a single unexplained number.`},
-'voltage-drop':{keywords:['voltage drop calculator','voltage drop formula','electrical voltage drop','wire voltage drop','copper voltage drop','voltage drop percentage','NEC voltage drop','branch circuit voltage drop','feeder voltage drop','AWG voltage drop','wire resistance','circuit voltage','electrical wire calculator','voltage loss','long wire run','electrical design','conductor impedance','voltage drop calculation'],article:`Voltage drop is the reduction in electrical potential that occurs as current travels through a conductor. It becomes especially important on long cable runs, higher-current circuits and systems where sensitive equipment needs a stable supply voltage. This voltage drop calculator provides a quick estimate for a copper circuit using load current, system voltage, conductor size and one-way distance.
+### Copper, aluminum and installation assumptions
+This calculator uses a copper constant and a simplified resistance model. Aluminum requires different electrical constants and may have different termination and installation considerations. Temperature, conductor construction, AC impedance, conduit configuration and phase arrangement can also affect detailed calculations. Do not treat this simplified result as a universal NEC wire-size lookup.
 
-The result is shown both as volts lost and as a percentage of the system voltage. That percentage is often the easiest way to compare different conductor sizes or evaluate a design target. A larger conductor has lower resistance, so it normally produces less voltage drop for the same current and distance.
+### Worked example and practical use
+For a 20 A, 120 V load over an 80 ft one-way run with a 3% target, the tool first converts 3% of 120 V into a 3.6 V allowable drop and then calculates the required conductor area. The resulting AWG is a preliminary voltage-drop choice; verify ampacity, overcurrent protection, conductor temperature rating and the actual installation before using it on a project.`},
+'voltage-drop':{primary:'voltage drop calculator',intent:'Calculation intent: users want volts lost and percentage drop for a known conductor, load and circuit length.',keywords:['voltage drop calculator','electrical voltage drop calculator','wire voltage drop calculator','voltage drop formula','voltage drop percentage calculator','copper voltage drop','AWG voltage drop calculator','NEC voltage drop','branch circuit voltage drop','feeder voltage drop','voltage loss calculator','wire resistance calculator','circuit voltage drop','long wire run voltage drop','voltage drop calculation','electrical wire calculator','conductor resistance','copper wire resistance','voltage drop in volts','voltage drop in percent','single phase voltage drop','electrical design calculator','voltage drop for 12 AWG','voltage drop for 10 AWG'],article:`Voltage drop is the electrical potential lost as current travels through conductor resistance. People searching for a voltage drop calculator usually need two practical answers: how many volts are lost and what percentage of the system voltage that loss represents. CalcForge provides both for a simplified copper-conductor calculation.
+
+The tool is designed for preliminary checks on branch circuits, feeders and long wire runs. Detailed AC systems may require conductor impedance, phase configuration, power factor, temperature and installation-specific data.
+
+### What the voltage drop calculator calculates
+The calculator uses load current, system voltage, one-way distance and copper conductor size to estimate voltage loss. It reports the drop in volts and as a percentage of nominal system voltage so different circuits can be compared consistently.
 
 ### Voltage drop formula
-The simplified resistance method used here is Vd = 2 × K × I × D ÷ CM. K is a copper resistivity constant, I is load current, D is one-way distance and CM is conductor area in circular mils. The factor of two represents the outgoing and returning conductor path in a typical two-wire calculation.
+The simplified formula is Vd = 2 × K × I × D ÷ CM. K is the copper constant, I is current in amperes, D is one-way distance and CM is conductor area in circular mils. The factor of two represents the outgoing and returning conductor path in a typical two-wire circuit.
 
-### What causes voltage drop?
-The main factors are current, conductor resistance and circuit length. Higher current increases the voltage lost across a given resistance, while longer conductors add more resistance. Conductor size also matters because a larger cross-sectional area generally has lower resistance.
+### Variables, units and assumptions
+Current is entered in amperes, voltage in volts, distance in feet and conductor size as AWG. The calculation assumes a copper conductor and uses a fixed resistivity constant. It does not model every AC impedance effect, temperature correction or complex multi-phase arrangement.
+
+### Step-by-step voltage-drop calculation
+Choose the actual load current rather than the circuit-breaker rating when appropriate. Enter nominal system voltage and one-way run length, select the conductor gauge, calculate the resistance-based voltage loss, then divide the loss by nominal voltage to obtain the percentage drop. Compare the result with the project's actual design criterion.
 
 ### Why voltage drop matters
-Excessive voltage loss can cause poor equipment performance, dim lighting, motor starting problems, overheating and nuisance operation. The effect depends on the equipment and system, so a design should not rely on a single universal percentage. Check the applicable electrical code, project specification and equipment manufacturer's requirements.
-
-### Voltage drop percentage explained
-Voltage-drop percentage compares the calculated voltage loss with the nominal system voltage. The same number of lost volts represents a larger percentage on a lower-voltage circuit. Reporting both volts and percentage makes it easier to evaluate different circuit designs consistently.
+Excessive voltage loss can contribute to poor equipment performance, motor-starting issues, dim lighting or reduced voltage at the load. The engineering impact depends on the equipment and system. A percentage target should come from the applicable code guidance, project specification or manufacturer requirement rather than an arbitrary universal rule.
 
 ### How to reduce voltage drop
-The usual ways to reduce voltage drop are increasing conductor size, reducing circuit length, reducing load current where possible, or changing the system voltage where the overall design permits it. For detailed AC feeder calculations, conductor impedance, power factor, phase configuration and installation conditions may need to be included. Use this calculator as a clear preliminary tool, then perform the project-specific engineering check.`},
-'conduit-fill':{keywords:['conduit fill calculator','conduit fill','NEC conduit fill','electrical conduit sizing','conduit size calculator','wire fill calculator','conductor fill','EMT conduit fill','PVC conduit fill','electrical raceway','wire count conduit','conduit area','cable fill','AWG conduit fill','raceway sizing','electrical installation','NEC Chapter 9','conductor area'],article:`Conduit fill determines how much of a raceway's usable cross-sectional area is occupied by conductors. A conduit fill calculator is useful when planning an electrical raceway because too many conductors or oversized conductors can make installation difficult and may violate the applicable fill limit. This CalcForge tool provides a quick preliminary estimate using conductor count, conductor size and conduit inside diameter.
+Increasing conductor size reduces resistance and is often the simplest way to reduce drop. Shortening the run, reducing current where practical or using a higher system voltage can also reduce percentage loss. For detailed feeders and larger systems, use the applicable conductor impedance and phase-specific method.
 
-### How conduit fill works
-The basic idea is simple: add the cross-sectional area of the conductors, calculate the internal area of the conduit, and divide conductor area by conduit area. The result is expressed as a percentage. Different conductor counts have different permitted fill percentages under the NEC, so the number of conductors matters. This calculator uses 40% as a common reference for three or more conductors, but it should not be treated as a universal code limit for every installation.
+### Worked example and limitations
+For 30 A at 240 V over 100 ft using 10 AWG copper, the calculator evaluates the conductor resistance from its circular-mil area and returns the estimated volts lost and percentage. Treat the result as a simplified resistance estimate; verify detailed circuit design using the applicable electrical standard, conductor data and installation conditions.`},
+'conduit-fill':{primary:'conduit fill calculator',intent:'Calculation and code-reference intent: users want to estimate conductor area inside a raceway and understand the applicable fill limit.',keywords:['conduit fill calculator','NEC conduit fill calculator','conduit fill','electrical conduit sizing','conduit size calculator','wire fill calculator','conductor fill calculator','raceway fill calculator','EMT conduit fill','PVC conduit fill','electrical raceway sizing','wire count conduit','conduit area calculator','cable fill calculator','AWG conduit fill','raceway sizing calculator','NEC Chapter 9 conduit fill','conductor area calculator','conduit fill percentage','40 percent conduit fill','wire fill percentage','electrical installation calculator','conduit capacity','conductor dimensions'],article:`A conduit fill calculator helps estimate how much of a raceway's internal area is occupied by conductors. The practical search intent is usually to decide whether a proposed conductor set can fit in a conduit or whether a larger raceway is needed. CalcForge provides a transparent area-based estimate and clearly labels the 40% value as a reference rather than a universal rule.
 
-### Understanding conductor area
-Conductor fill depends on the actual outside dimensions of the conductors, not simply the number of wires. Larger AWG conductors occupy more space, and insulation thickness can change the outside diameter even when the conductor's nominal size is the same. Accurate raceway calculations therefore depend on reliable conductor dimensions.
+### What the conduit fill calculator calculates
+The tool multiplies conductor count by a reference conductor area, calculates the internal cross-sectional area of the entered conduit, and reports the resulting fill percentage. It then compares the result with a 40% reference commonly associated with three or more conductors under NEC raceway-fill rules.
 
-### Why conductor dimensions matter
-Two conductors with the same nominal AWG size can have different outside dimensions because insulation type and construction can differ. For code-compliant raceway sizing, use the applicable conductor dimensions and the NEC tables rather than assuming every wire of an AWG size occupies exactly the same area. Cable assemblies and special wiring methods may require additional considerations.
+### Conduit fill formula
+Fill % = total conductor area ÷ conduit area × 100. For identical conductors, total conductor area is count × conductor area. Conduit area is π × (inside diameter ÷ 2)². Actual code calculations must use the dimensions and fill rules applicable to the exact wiring method.
 
-### Conduit fill percentage
-The fill percentage is the conductor area divided by the usable internal conduit area, multiplied by 100. A higher percentage means less free space remains for pulling and arranging the conductors. The applicable code rule depends on conductor count and wiring method, so the calculated percentage should always be compared with the correct requirement.
+### Variables and conductor dimensions
+The inputs are conductor count, conductor AWG size and conduit inside diameter. Nominal AWG alone does not describe the complete outside dimension of an insulated conductor. Insulation type, construction and cable assembly can change the area occupied inside the raceway.
 
-### Practical conduit sizing workflow
-Start with the complete conductor list, including grounding and other conductors that the applicable rules require you to count. Identify the actual conductor outside area, select a raceway material and trade size, then verify the resulting fill percentage. Also check pulling difficulty, bend requirements, box fill, derating and the installation method. A raceway that technically meets area requirements may still be impractical to install if the conductor arrangement is difficult.
+### Step-by-step raceway sizing
+List every conductor that must be considered under the applicable rule. Confirm the actual outside dimensions or table area, select a candidate raceway, calculate the occupied area and compare the percentage with the correct fill limit. Then consider bend space, box fill, pulling conditions and derating separately.
 
-### Final code verification
-This calculator is therefore best used for early design and comparison. Before installation, confirm the result against the current NEC edition adopted by the project jurisdiction and the exact conductor and raceway data.`},
-'cfm':{keywords:['CFM calculator','airflow calculator','HVAC CFM','CFM formula','air changes per hour','ACH calculator','room airflow','HVAC airflow','ventilation calculator','exhaust CFM','supply air CFM','room volume calculator','air changes calculator','HVAC design','duct airflow','indoor air quality','fan CFM','airflow requirements'],article:`CFM, or cubic feet per minute, is one of the most common airflow units used in HVAC work. A CFM calculator can help estimate how much air a room or space needs when an air-change requirement is known. This CalcForge tool uses room length, width, height and air changes per hour to estimate the required airflow.
+### Why the 40% figure is not universal
+Raceway fill limits depend on conductor count and wiring method. The number of conductors can change the permitted percentage, and different raceway or cable arrangements can have different requirements. Use the current code edition adopted by the project's jurisdiction and the relevant tables rather than treating 40% as a blanket answer.
 
-### CFM and air changes per hour
-The relationship is straightforward: CFM = room volume × ACH ÷ 60. First calculate the room volume in cubic feet. Then multiply by the desired air changes per hour and divide by 60 minutes per hour. The result is the approximate airflow required to replace the room's air at that rate.
+### Practical conduit-fill example
+Suppose six identical 12 AWG reference conductors are installed in a raceway with a known inside diameter. The calculator sums the six conductor areas, divides by the conduit internal area and reports the percentage. If the result is above the 40% reference, select a larger raceway or revisit the conductor arrangement before performing the final code check.
 
-### How room volume affects airflow
-Room volume is calculated by multiplying length, width and height. A larger room contains more air, so the same ACH target requires a greater CFM value. This is why room dimensions should be measured carefully before using an air-change calculation.
+### Assumptions and limitations
+This is a preliminary area calculation, not a complete NEC compliance engine. It does not independently determine every conductor dimension, grounding rule, box-fill requirement, derating factor or installation constraint. Use the applicable NEC tables and manufacturer data for final raceway sizing.`},
+'cfm':{primary:'CFM calculator',intent:'Calculation intent: users want required airflow from room volume and a known air-change target.',keywords:['CFM calculator','HVAC CFM calculator','airflow calculator','required CFM calculator','room CFM calculator','CFM from ACH','ACH calculator','air changes per hour calculator','airflow from room size','room airflow calculator','HVAC airflow calculator','ventilation CFM calculator','exhaust CFM calculator','supply air CFM calculator','room volume calculator','air changes calculator','CFM formula','HVAC ventilation calculator','fan CFM calculator','duct airflow calculator','indoor air quality airflow','CFM for room size','CFM per hour calculation','airflow requirements'],article:`CFM means cubic feet per minute and is a common airflow unit in HVAC work. A CFM calculator is useful when a room volume and a defensible air-changes-per-hour (ACH) target are already known. CalcForge converts those inputs into an implied airflow requirement without pretending that ACH alone is a complete HVAC design method.
 
-### Example HVAC calculation
-Imagine a room that is 12 feet long, 15 feet wide and 9 feet high. Its volume is 1,620 cubic feet. At 6 air changes per hour, the basic calculation gives 162 CFM. That number is an airflow target based on the selected ACH, not a complete HVAC equipment selection.
+### What the CFM calculator calculates
+The tool calculates room volume from length, width and height, then multiplies that volume by the selected ACH and divides by 60 minutes per hour. The result is the airflow needed to replace the room volume at the specified air-change rate.
 
-### CFM is not the same as cooling capacity
-A major HVAC design mistake is assuming that airflow alone determines equipment size. Cooling and heating capacity depend on sensible and latent loads, outdoor conditions, envelope performance, solar gain, occupancy, equipment and other factors. Ventilation requirements may also be determined by occupancy and applicable standards rather than a simple room ACH assumption.
+### CFM and ACH formula
+Room volume = length × width × height. Required CFM = room volume × ACH ÷ 60. Length, width and height are entered in feet, volume is therefore in cubic feet, ACH is in air changes per hour, and the final airflow is in cubic feet per minute.
 
-### Choosing a practical airflow target
-The appropriate ACH depends on the room use, occupancy, ventilation strategy and applicable standards. A bedroom, classroom, workshop, bathroom and industrial space can have very different airflow requirements. The calculator should therefore be treated as an estimate based on the ACH value you provide, not as a universal design recommendation.
+### Variables and units
+Measure the interior room dimensions in feet and enter the air-change target as changes per hour. Because volume is calculated directly from the three dimensions, a small error in ceiling height or room dimensions can affect the resulting airflow. For irregular spaces, use an appropriate engineering estimate of volume.
 
-### When this calculator is useful
-Use it for preliminary ventilation estimates, exhaust planning, classroom or workshop airflow checks, fan sizing comparisons and quick room-air-change calculations. For final HVAC design, combine airflow with load calculations, duct pressure loss, diffuser selection, filtration, ventilation requirements and equipment performance data.`},
-'bearing-life':{keywords:['bearing life calculator','bearing life','L10 bearing life','bearing life formula','bearing calculation','ball bearing life','roller bearing life','dynamic load rating','equivalent dynamic load','bearing RPM','bearing service life','mechanical engineering calculator','bearing load','bearing fatigue life','machine design','rotating equipment','bearing selection','L10 life'],article:`Bearing life is a key consideration in rotating machinery because a bearing can experience millions of load cycles before fatigue becomes the limiting mechanism. This bearing life calculator estimates basic L10 rating life from the bearing dynamic load rating, equivalent dynamic load and rotational speed. It is intended for preliminary mechanical engineering work and for understanding how bearing load and speed affect expected rating life.
+### Step-by-step airflow calculation
+First calculate the room volume. Next identify the documented ACH target for the space or project. Multiply volume by ACH, divide by 60, and interpret the result as the required airflow associated with that ACH target. Then determine whether the airflow is supply, outdoor, exhaust or recirculated air before using it for equipment or duct decisions.
 
-### What is L10 bearing life?
-Basic rating life L10 is commonly expressed as the number of revolutions that 90% of an identical group of bearings are expected to achieve or exceed under defined operating conditions. The classic equation is L10 = (C/P)^p × 10^6 revolutions. For ball bearings, the exponent is 3; for roller bearings, the commonly used exponent is 10/3.
+### Worked HVAC example
+A 12 ft × 15 ft × 9 ft room has a volume of 1,620 ft³. At 6 ACH, the implied airflow is 1,620 × 6 ÷ 60 = 162 CFM. This is a clean volume-and-ACH calculation; it does not by itself select an air conditioner, fan or diffuser.
 
-### Understanding dynamic load rating
-The dynamic load rating C is a manufacturer-defined reference value used in bearing life calculations. The equivalent dynamic load P represents the effective load applied to the bearing for the calculation. Both values must be selected from appropriate bearing data and loading conditions.
+### CFM is not cooling capacity
+Airflow and heating or cooling capacity are related but not interchangeable. Equipment sizing depends on sensible and latent loads, outdoor conditions, envelope performance, solar gain, occupancy and equipment characteristics. Ventilation requirements can also be based on occupancy and applicable standards rather than a generic ACH value.
 
-### Why load has such a strong effect
-Bearing life is nonlinear with load. Because the load ratio is raised to an exponent, a relatively small reduction in equivalent dynamic load can produce a large increase in calculated rating life. Conversely, excessive load can reduce calculated life dramatically. This is why bearing selection should consider the complete load spectrum rather than only the nominal shaft load.
+### Choosing an ACH target
+Do not choose ACH simply because a number appears on a calculator page. The appropriate target depends on room use, occupancy, ventilation strategy, pressure relationships and applicable standards. A bathroom, classroom, bedroom, workshop and industrial space can have different design criteria.
+
+### Assumptions and limitations
+This tool assumes a rectangular room and a user-supplied ACH target. It does not calculate heating or cooling loads, duct pressure loss, fan static pressure, filtration or code-required outdoor-air rates. Use it as a preliminary airflow calculation and verify the final HVAC design against project requirements and applicable standards.`},
+'bearing-life':{primary:'bearing life calculator',intent:'Calculation intent: users want basic L10 rating life in revolutions and hours from C, P, bearing type and RPM.',keywords:['bearing life calculator','bearing life calculation','L10 bearing life calculator','L10 life calculator','bearing life formula','ISO 281 bearing life','ABMA bearing life','ball bearing life calculator','roller bearing life calculator','bearing rating life','dynamic load rating calculator','equivalent dynamic load bearing','bearing RPM life','bearing service life calculator','bearing fatigue life','bearing load life','mechanical bearing calculator','rotating equipment bearing life','L10 bearing hours','bearing life in revolutions','C over P bearing life','bearing selection calculator','basic rating life','bearing life estimate'],article:`A bearing life calculator is commonly used to estimate basic L10 rating life from a bearing's dynamic load rating, equivalent dynamic load and operating speed. The most useful result is not just a number of hours: it is an explanation of how load, bearing type and speed affect the rating-life estimate.
+
+### What L10 bearing life means
+Basic rating life L10 is the number of revolutions that 90% of an identical group of bearings are expected to achieve or exceed under defined conditions. It is a statistical rating, not a guaranteed service life for one individual bearing. The standard basic-life relationship is L10 = (C/P)^p × 10⁶ revolutions.
+
+### Bearing life formula and variables
+C is the basic dynamic load rating from the bearing manufacturer's catalogue. P is the equivalent dynamic load applied to the bearing. The exponent p is 3 for ball bearings and 10/3 for roller bearings in the basic rating-life equation. Keep C and P in consistent units.
+
+### Step-by-step L10 calculation
+Obtain C from the actual bearing data sheet, determine the appropriate equivalent dynamic load P, select the bearing type, and enter the shaft speed. The calculator raises the C/P ratio to the appropriate exponent to obtain basic life in millions of revolutions, then converts revolutions to operating hours using RPM.
+
+### Why load has a strong effect on life
+Bearing life changes nonlinearly with load because the load ratio is raised to an exponent. For a ball bearing, halving equivalent load while holding C constant increases the basic life ratio by a factor of eight. This is why bearing selection should evaluate the complete load condition rather than treating nominal shaft load as the only design variable.
 
 ### Ball bearings versus roller bearings
-The life exponent differs between common bearing types. The calculator uses p = 3 for ball bearings and p = 10/3 for roller bearings. This distinction is important because changing the bearing type changes the relationship between load and calculated basic rating life.
+The life exponent differs between the two common categories supported here. Ball bearings use p = 3, while roller bearings use p = 10/3. The difference changes the sensitivity of calculated rating life to the C/P ratio, so selecting the correct bearing type matters.
 
-### Converting bearing life to hours
-Revolutions are converted to operating hours using shaft speed. At higher RPM, a bearing accumulates the same number of revolutions in less time, so its calculated life in hours decreases. A slow-moving bearing can therefore have a long operating time even when its life in revolutions is unchanged.
+### Converting L10 to operating hours
+Once L10 is expressed in revolutions, operating hours are L10 × 10⁶ ÷ (60 × RPM). A higher rotational speed consumes the same number of revolutions in less time, so life in hours decreases as RPM increases when all other inputs remain constant.
 
-### What this calculator does not cover
-Actual bearing service life can be affected by lubrication, contamination, mounting accuracy, misalignment, temperature, clearance, vibration, static load and variable operating conditions. For critical machinery, use the bearing manufacturer's detailed life methodology and application data. This calculator is a transparent basic-rating-life estimate, not a substitute for a complete bearing application analysis.`}
+### Worked bearing-life example
+For a ball bearing with C = 10 kN, P = 2 kN and speed of 1,800 RPM, the basic life is (10/2)^3 × 10⁶ = 125 million revolutions. Converting that value by 60 × 1,800 gives roughly 1,157 operating hours. This is the basic L10 estimate before reliability or application-specific adjustments.
+
+### Assumptions and limitations
+Basic rating life does not fully model lubrication, contamination, mounting, alignment, temperature, clearance, vibration, static loading or variable load histories. For critical machinery, use the bearing manufacturer's ISO 281/application methodology and actual operating data. CalcForge is a transparent preliminary rating-life tool, not a substitute for bearing application engineering.`}
 };
