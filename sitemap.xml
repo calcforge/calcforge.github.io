@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://calcforge.github.io/</loc></url>
-<url><loc>https://calcforge.github.io/electrical/</loc></url>
-<url><loc>https://calcforge.github.io/hvac/</loc></url>
-<url><loc>https://calcforge.github.io/mechanical/</loc></url>
-<url><loc>https://calcforge.github.io/construction/</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=wire-size</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=voltage-drop</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=conduit-fill</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=cfm</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=bearing-life</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=ampacity</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=wire-gauge</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=transformer-sizing</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=breaker-size</loc></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=3-phase-power</loc></url>
+<url><loc>https://calcforge.github.io/</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/electrical/</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/hvac/</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/mechanical/</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/construction/</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=wire-size</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=voltage-drop</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=conduit-fill</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=cfm</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=bearing-life</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=ampacity</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=wire-gauge</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=transformer-sizing</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=breaker-size</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=3-phase-power</loc><lastmod>2026-09-13</lastmod></url>
 </urlset>
