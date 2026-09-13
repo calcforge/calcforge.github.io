@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://calcforge.github.io/</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/about.html</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/methodology.html</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/disclaimer.html</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/privacy.html</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/terms.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/electrical/</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/hvac/</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/mechanical/</loc><lastmod>2026-09-13</lastmod></url>
@@ -13,6 +18,6 @@
 <url><loc>https://calcforge.github.io/calculator.html?slug=ampacity</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/calculator.html?slug=wire-gauge</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/calculator.html?slug=transformer-sizing</loc><lastmod>2026-09-13</lastmod></url>
-<url><loc>https://calcforge.github.io/calculator.html?slug=breaker-size</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/calculator.html?slug=breaker-size</slug><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/calculator.html?slug=3-phase-power</loc><lastmod>2026-09-13</lastmod></url>
 </urlset>
