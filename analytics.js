@@ -12,16 +12,16 @@
   gtag('js', new Date());
   gtag('config', MEASUREMENT_ID, { send_page_view: false });
 
+  function trackEvent(name, params){
+    gtag('event', name, params || {});
+  }
+
   function trackPage(data){
     const articleName = data && data.articleName ? data.articleName : document.title;
     const articleSlug = data && data.articleSlug ? data.articleSlug : undefined;
     const category = data && data.category ? data.category : undefined;
     const contentGroup = data && data.contentGroup ? data.contentGroup : (articleSlug ? 'Calculator Articles' : 'Site Pages');
-    const params = {
-      page_title: articleName,
-      page_location: window.location.href,
-      content_group: contentGroup
-    };
+    const params = { page_title: articleName, page_location: window.location.href, content_group: contentGroup };
     if(articleSlug) params.article_slug = articleSlug;
     if(category) params.article_category = category;
     gtag('event', 'page_view', params);
@@ -35,9 +35,8 @@
     }
   }
 
-  window.CalcForgeAnalytics = { trackPage };
+  window.CalcForgeAnalytics = { trackPage, trackEvent };
 
-  /* Calculator and category pages send their own named page event. */
   if(!document.getElementById('calculatorPage') && !document.body.dataset.category){
     window.setTimeout(function(){ trackPage({}); }, 100);
   }
