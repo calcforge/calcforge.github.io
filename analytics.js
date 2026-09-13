@@ -16,10 +16,11 @@
     const articleName = data && data.articleName ? data.articleName : document.title;
     const articleSlug = data && data.articleSlug ? data.articleSlug : undefined;
     const category = data && data.category ? data.category : undefined;
+    const contentGroup = data && data.contentGroup ? data.contentGroup : (articleSlug ? 'Calculator Articles' : 'Site Pages');
     const params = {
       page_title: articleName,
       page_location: window.location.href,
-      content_group: data && data.contentGroup ? data.contentGroup : (articleSlug ? 'Calculator Articles' : 'Site Pages')
+      content_group: contentGroup
     };
     if(articleSlug) params.article_slug = articleSlug;
     if(category) params.article_category = category;
@@ -28,15 +29,16 @@
       gtag('event', 'article_view', {
         article_name: articleName,
         article_slug: articleSlug,
-        article_category: category || ''
+        article_category: category || '',
+        content_group: contentGroup
       });
     }
   }
 
   window.CalcForgeAnalytics = { trackPage };
 
-  /* Calculator.js sets the final dynamic article title before tracking. */
-  if(!document.getElementById('calculatorPage')){
+  /* Calculator and category pages send their own named page event. */
+  if(!document.getElementById('calculatorPage') && !document.body.dataset.category){
     window.setTimeout(function(){ trackPage({}); }, 100);
   }
 })();
