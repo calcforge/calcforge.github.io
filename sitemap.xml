@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://calcforge.github.io/</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/</loc><lastmod>2026-09-14</lastmod></url>
 <url><loc>https://calcforge.github.io/about.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/methodology.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/disclaimer.html</loc><lastmod>2026-09-13</lastmod></url>
@@ -12,6 +12,12 @@
 <url><loc>https://calcforge.github.io/construction/</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/guides/how-to-calculate-cfm.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/guides/how-to-size-a-duct.html</loc><lastmod>2026-09-13</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/voltage-drop-calculation-guide.html</loc><lastmod>2026-09-14</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/wire-size-selection-guide.html</loc><lastmod>2026-09-14</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/breaker-sizing-guide.html</loc><lastmod>2026-09-14</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/conduit-fill-calculation-guide.html</loc><lastmod>2026-09-14</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/three-phase-power-calculation-guide.html</loc><lastmod>2026-09-14</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/ampacity-calculation-guide.html</loc><lastmod>2026-09-14</lastmod></url>
 <url><loc>https://calcforge.github.io/guide.html?slug=voltage-drop</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/guide.html?slug=wire-size</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/guide.html?slug=conduit-fill</loc><lastmod>2026-09-13</lastmod></url>
