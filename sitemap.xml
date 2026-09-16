@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://calcforge.github.io/</loc><lastmod>2026-09-15</lastmod></url>
+<url><loc>https://calcforge.github.io/</loc><lastmod>2026-09-16</lastmod></url>
 <url><loc>https://calcforge.github.io/about.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/methodology.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/disclaimer.html</loc><lastmod>2026-09-13</lastmod></url>
@@ -10,7 +10,7 @@
 <url><loc>https://calcforge.github.io/hvac/</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/mechanical/</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/construction/</loc><lastmod>2026-09-13</lastmod></url>
-<url><loc>https://calcforge.github.io/finance/</loc><lastmod>2026-09-15</lastmod></url>
+<url><loc>https://calcforge.github.io/finance/</loc><lastmod>2026-09-16</lastmod></url>
 <url><loc>https://calcforge.github.io/guides/how-to-calculate-cfm.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/guides/how-to-size-a-duct.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/guides/voltage-drop-calculation-guide.html</loc><lastmod>2026-09-14</lastmod></url>
@@ -36,4 +36,13 @@
 <url><loc>https://calcforge.github.io/calculators/mortgage-affordability-calculator/</loc><lastmod>2026-09-15</lastmod></url>
 <url><loc>https://calcforge.github.io/calculators/loan-amortization-calculator/</loc><lastmod>2026-09-15</lastmod></url>
 <url><loc>https://calcforge.github.io/calculators/monthly-payment-calculator/</loc><lastmod>2026-09-15</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/compound-interest-calculator/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/simple-interest-calculator/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/interest-calculator/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/interest-rate-calculator/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/compound-growth-calculator/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/savings-calculator/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/future-value-calculator/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/loan-interest-calculator/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/calculators/loan-repayment-calculator/</loc><lastmod>2026-09-16</lastmod></url>
 </urlset>
