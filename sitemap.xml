@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://calcforge.github.io/</loc><lastmod>2026-09-16</lastmod></url>
+<url><loc>https://calcforge.github.io/</loc><lastmod>2026-09-22</lastmod></url>
 <url><loc>https://calcforge.github.io/about.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/methodology.html</loc><lastmod>2026-09-13</lastmod></url>
 <url><loc>https://calcforge.github.io/disclaimer.html</loc><lastmod>2026-09-13</lastmod></url>
@@ -45,4 +45,18 @@
 <url><loc>https://calcforge.github.io/calculators/future-value-calculator/</loc><lastmod>2026-09-18</lastmod></url>
 <url><loc>https://calcforge.github.io/calculators/loan-interest-calculator/</loc><lastmod>2026-09-18</lastmod></url>
 <url><loc>https://calcforge.github.io/calculators/loan-repayment-calculator/</loc><lastmod>2026-09-18</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/roth-ira-calculator-guide.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/ira-calculator-guide.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/auto-finance-calculator-guide.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/auto-payment-estimator-guide.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/sales-tax-calculator-guide.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/discount-calculator-guide.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/percentage-calculator-guide.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/ohms-law-explained.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/voltage-drop-formula-explained.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/electrical-power-formula.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/power-factor-explained.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/three-phase-power-formula.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/awg-wire-gauge-explained.html</loc><lastmod>2026-09-22</lastmod></url>
+<url><loc>https://calcforge.github.io/guides/transformer-turns-ratio-explained.html</loc><lastmod>2026-09-22</lastmod></url>
 </urlset>
