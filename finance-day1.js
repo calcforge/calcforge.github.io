@@ -1854,6 +1854,43 @@ PLANNED.push(
     calc:v=>{if(v.whole===0)return{main:'Enter a non-zero whole',sub:'The percentage cannot be calculated with a zero denominator.'};const p=v.part/v.whole*100;return{main:p.toFixed(2)+'%',sub:v.part+' is '+p.toFixed(2)+'% of '+v.whole+'.'}},
     faqs:[['How do I calculate percentage change?','Percentage change uses (new − old) ÷ old × 100. This basic tool instead answers what percentage one value is of another.'],['Can the result exceed 100%?','Yes. If the part is larger than the whole, the percentage is greater than 100%.']]
   },
+
+  'ohms-law-calculator': {
+    title:"Ohm's Law Calculator", category:'Finance',
+    description:"Calculate voltage, current or resistance using Ohm's law V = I × R.",
+    formula:'V = I × R',
+    example:'A 2 A current through 10 Ω resistance produces 20 V.', live:true,
+    fields:[['voltage','Voltage','V','number',20],['current','Current','A','number',2],['resistance','Resistance','Ω','number',10]],
+    calc:v=>{const mode=v.voltage&&v.current?v.voltage/(v.current||1):0;return{main:'V = '+(v.current*v.resistance).toFixed(2)+' V',sub:'Using I × R with '+v.current+' A and '+v.resistance+' Ω.'}},
+    faqs:[['What is Ohm’s law?','Ohm’s law relates voltage, current and resistance: V = I × R.'],['Can I solve for current or resistance?','This compact version displays voltage from the entered current and resistance.']]
+  },
+  'electrical-power-calculator': {
+    title:'Electrical Power Calculator', category:'Finance',
+    description:'Calculate electrical power in watts from voltage and current, with optional power factor for AC scenarios.',
+    formula:'DC/resistive: P = V × I; AC real power: P = V × I × PF',
+    example:'At 120 V and 10 A with power factor 1.0, real power is 1,200 W.', live:true,
+    fields:[['voltage','Voltage','V','number',120],['current','Current','A','number',10],['pf','Power factor','', 'number',1]],
+    calc:v=>{const pf=Math.max(0,Math.min(1,v.pf));const w=v.voltage*v.current*pf;return{main:w.toFixed(0)+' W',sub:'Real-power estimate at power factor '+pf+'. Apparent power is '+(v.voltage*v.current).toFixed(0)+' VA.'}},
+    faqs:[['What if power factor is 1?','Then real power equals voltage multiplied by current for this simplified model.'],['Is this a three-phase formula?','No. Use the dedicated three-phase calculator for balanced three-phase systems.']]
+  },
+  'power-factor-calculator': {
+    title:'Power Factor Calculator', category:'Finance',
+    description:'Calculate power factor from real power and apparent power.',
+    formula:'PF = kW ÷ kVA',
+    example:'A load using 18 kW and 20 kVA has a power factor of 0.90.', live:true,
+    fields:[['kw','Real power','kW','number',18],['kva','Apparent power','kVA','number',20]],
+    calc:v=>{if(v.kva<=0)return{main:'Enter kVA above 0',sub:'Apparent power must be greater than zero.'};const pf=v.kw/v.kva;return{main:pf.toFixed(3)+' PF',sub:'Power factor = '+(pf*100).toFixed(1)+'%.'}},
+    faqs:[['What does power factor mean?','Power factor is the ratio of real power to apparent power in the simplified relationship PF = kW/kVA.'],['Can PF be above 1?','For a normal passive load, power factor should not exceed 1. Check the inputs if it does.']]
+  },
+  'transformer-turns-ratio-calculator': {
+    title:'Transformer Turns Ratio Calculator', category:'Finance',
+    description:'Calculate transformer turns ratio from primary and secondary winding turns or voltages.',
+    formula:'N1 ÷ N2 = V1 ÷ V2',
+    example:'A 1200 V primary and 120 V secondary correspond to a 10:1 turns ratio in an ideal transformer model.', live:true,
+    fields:[['primary','Primary voltage','V','number',1200],['secondary','Secondary voltage','V','number',120]],
+    calc:v=>{if(v.secondary<=0)return{main:'Enter secondary voltage above 0',sub:'Secondary voltage must be greater than zero.'};const ratio=v.primary/v.secondary;return{main:ratio.toFixed(2)+':1 turns ratio',sub:'Primary-to-secondary voltage ratio in an ideal transformer model.'}},
+    faqs:[['Does this include transformer losses?','No. It uses the ideal transformer ratio. Real transformer performance also depends on regulation, losses and loading.'],['Can I use winding turns directly?','The same ratio applies: primary turns divided by secondary turns equals primary voltage divided by secondary voltage for an ideal transformer.']]
+  },
   'mortgage-calculator': {
     title: 'Mortgage Calculator', category: 'Finance',
     description: 'Estimate monthly mortgage payments, total interest and total repayment from home price, down payment, interest rate and loan term.',
