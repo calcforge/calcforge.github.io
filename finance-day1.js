@@ -87,6 +87,10 @@ PLANNED.push(
   ['Finance','Mortgage Affordability Calculator','mortgage-affordability-calculator'],
   ['Finance','Loan Amortization Calculator','loan-amortization-calculator'],
   ['Finance','Monthly Payment Calculator','monthly-payment-calculator'],
+  ['Electrical / NEC',"Ohm's Law Calculator",'ohms-law-calculator'],
+  ['Electrical / NEC','Electrical Power Calculator','electrical-power-calculator'],
+  ['Electrical / NEC','Power Factor Calculator','power-factor-calculator'],
+  ['Electrical / NEC','Transformer Turns Ratio Calculator','transformer-turns-ratio-calculator'],
   ['Finance','Roth IRA Calculator','roth-ira-calculator'],
   ['Finance','IRA Calculator','ira-calculator'],
   ['Finance','Sales Tax Calculator','sales-tax-calculator'],
@@ -1865,7 +1869,7 @@ PLANNED.push(
     faqs:[['What is Ohm’s law?','Ohm’s law relates voltage, current and resistance: V = I × R.'],['Can I solve for current or resistance?','This compact version displays voltage from the entered current and resistance.']]
   },
   'electrical-power-calculator': {
-    title:'Electrical Power Calculator', category:'Finance',
+    title:'Electrical Power Calculator', category:'Electrical / NEC',
     description:'Calculate electrical power in watts from voltage and current, with optional power factor for AC scenarios.',
     formula:'DC/resistive: P = V × I; AC real power: P = V × I × PF',
     example:'At 120 V and 10 A with power factor 1.0, real power is 1,200 W.', live:true,
@@ -1874,7 +1878,7 @@ PLANNED.push(
     faqs:[['What if power factor is 1?','Then real power equals voltage multiplied by current for this simplified model.'],['Is this a three-phase formula?','No. Use the dedicated three-phase calculator for balanced three-phase systems.']]
   },
   'power-factor-calculator': {
-    title:'Power Factor Calculator', category:'Finance',
+    title:'Power Factor Calculator', category:'Electrical / NEC',
     description:'Calculate power factor from real power and apparent power.',
     formula:'PF = kW ÷ kVA',
     example:'A load using 18 kW and 20 kVA has a power factor of 0.90.', live:true,
@@ -1883,7 +1887,7 @@ PLANNED.push(
     faqs:[['What does power factor mean?','Power factor is the ratio of real power to apparent power in the simplified relationship PF = kW/kVA.'],['Can PF be above 1?','For a normal passive load, power factor should not exceed 1. Check the inputs if it does.']]
   },
   'transformer-turns-ratio-calculator': {
-    title:'Transformer Turns Ratio Calculator', category:'Finance',
+    title:'Transformer Turns Ratio Calculator', category:'Electrical / NEC',
     description:'Calculate transformer turns ratio from primary and secondary winding turns or voltages.',
     formula:'N1 ÷ N2 = V1 ÷ V2',
     example:'A 1200 V primary and 120 V secondary correspond to a 10:1 turns ratio in an ideal transformer model.', live:true,
