@@ -86,7 +86,12 @@ PLANNED.push(
   ['Finance','Mortgage Payoff Calculator','mortgage-payoff-calculator'],
   ['Finance','Mortgage Affordability Calculator','mortgage-affordability-calculator'],
   ['Finance','Loan Amortization Calculator','loan-amortization-calculator'],
-  ['Finance','Monthly Payment Calculator','monthly-payment-calculator']
+  ['Finance','Monthly Payment Calculator','monthly-payment-calculator'],
+  ['Finance','Roth IRA Calculator','roth-ira-calculator'],
+  ['Finance','IRA Calculator','ira-calculator'],
+  ['Finance','Sales Tax Calculator','sales-tax-calculator'],
+  ['Finance','Discount Calculator','discount-calculator'],
+  ['Finance','Percentage Calculator','percentage-calculator']
 );,'number',5000],['contribution','Monthly contribution','
     title: 'Mortgage Calculator', category: 'Finance',
     description: 'Estimate monthly mortgage payments, total interest and total repayment from home price, down payment, interest rate and loan term.',
